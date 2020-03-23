@@ -8,7 +8,7 @@
     <SheetIdentifierTracking ignorable='true' predowngraded='true' />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
-  <repository-location id='ImageExtesion' path='/workbooks' revision='1.0' />
+  <repository-location id='ImageExtesion' path='/workbooks' revision='1.4' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -77,7 +77,7 @@
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <layout dim-ordering='alphabetic' dim-percentage='0.517915' measure-ordering='alphabetic' measure-percentage='0.482085' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.522822' measure-ordering='alphabetic' measure-percentage='0.477178' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Peru&quot;' />
       </semantic-values>
@@ -182,7 +182,7 @@
       <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
       <zones>
         <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
-          <zone h='49000' id='7' name='Pokemon' w='49200' x='800' y='1000'>
+          <zone h='45875' id='7' name='Pokemon' w='58200' x='41000' y='1000'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -190,7 +190,7 @@
               <format attr='margin' value='4' />
             </zone-style>
           </zone>
-          <zone h='49000' id='26' name='Pokemon (2)' w='49200' x='800' y='50000'>
+          <zone h='52125' id='26' name='Pokemon (2)' w='98400' x='800' y='46875'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -198,24 +198,10 @@
               <format attr='margin' value='4' />
             </zone-style>
           </zone>
-          <zone forceUpdate='true' h='49000' id='29' param='[com.tableau.extensions.samples.uinamespace].[0.6.0].[http://localhost:8765/Samples/UINamespace/uinamespace.html]' type='dashboard-object' w='49200' x='50000' y='50000'>
-            <add-in add-in-id='com.tableau.extensions.samples.uinamespace' extension-url='http://localhost:8765/Samples/UINamespace/uinamespace.html' extension-version='0.6.0' instance-id='3FB696B34F7D4261B8D91494ACC6C96E'>
-              <instance-settings />
-              <type-settings>
-                <dashboard />
-              </type-settings>
-            </add-in>
-            <zone-style>
-              <format attr='border-color' value='#000000' />
-              <format attr='border-style' value='none' />
-              <format attr='border-width' value='0' />
-              <format attr='margin' value='4' />
-            </zone-style>
-          </zone>
-          <zone forceUpdate='true' h='49000' id='45' param='[com.example.extensions.name].[0.1.0].[http://localhost:8765/ImageDemo/ImageExtension.html]' type='dashboard-object' w='49200' x='50000' y='1000'>
-            <add-in add-in-id='com.example.extensions.name' extension-url='http://localhost:8765/ImageDemo/ImageExtension.html' extension-version='0.1.0' instance-id='6C52B8E975674EDA96603609FA48FF10'>
+          <zone forceUpdate='true' h='45875' id='64' param='[com.example.extensions.name].[0.1.0].[https://larosam.github.io/ImageDemo/ImageExtension.html]' type='dashboard-object' w='40200' x='800' y='1000'>
+            <add-in add-in-id='com.example.extensions.name' extension-url='https://larosam.github.io/ImageDemo/ImageExtension.html' extension-version='0.1.0' instance-id='A693E84414C04201BC263029DCEEC410'>
               <instance-settings>
-                <setting key='selectedWorkbooks' value='{&quot;workbook&quot;:&quot;Pokemon (2)&quot;,&quot;column&quot;:&quot;Imagen&quot;}' />
+                <setting key='selectedWorkbooks' value='{&quot;workbook&quot;:&quot;Pokemon&quot;,&quot;column&quot;:&quot;Imagen&quot;,&quot;title&quot;:&quot;Pokemon&quot;,&quot;subtitle&quot;:&quot;&quot;,&quot;descripcion&quot;:&quot;Descripcion del pokemon&quot;,&quot;image&quot;:&quot;https://media.redadn.es/imagenes/pokemon-escudo-nintendo-switch_332429_pn2.jpg&quot;}' />
               </instance-settings>
               <type-settings>
                 <dashboard />
@@ -238,23 +224,14 @@
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='47' type='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='46' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
-                <zone fixed-size='280' h='49000' id='7' is-fixed='true' name='Pokemon' w='49200' x='800' y='1000'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                  </zone-style>
-                </zone>
-                <zone forceUpdate='true' h='49000' id='45' param='[com.example.extensions.name].[0.1.0].[http://localhost:8765/ImageDemo/ImageExtension.html]' type='dashboard-object' w='49200' x='50000' y='1000'>
-                  <add-in add-in-id='com.example.extensions.name' extension-url='http://localhost:8765/ImageDemo/ImageExtension.html' extension-version='0.1.0' instance-id='6C52B8E975674EDA96603609FA48FF10'>
+            <zone h='100000' id='66' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='65' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone forceUpdate='true' h='45875' id='64' param='[com.example.extensions.name].[0.1.0].[https://larosam.github.io/ImageDemo/ImageExtension.html]' type='dashboard-object' w='40200' x='800' y='1000'>
+                  <add-in add-in-id='com.example.extensions.name' extension-url='https://larosam.github.io/ImageDemo/ImageExtension.html' extension-version='0.1.0' instance-id='A693E84414C04201BC263029DCEEC410'>
                     <instance-settings>
-                      <setting key='selectedWorkbooks' value='{&quot;workbook&quot;:&quot;Pokemon (2)&quot;,&quot;column&quot;:&quot;Imagen&quot;}' />
+                      <setting key='selectedWorkbooks' value='{&quot;workbook&quot;:&quot;Pokemon&quot;,&quot;column&quot;:&quot;Imagen&quot;,&quot;title&quot;:&quot;Pokemon&quot;,&quot;subtitle&quot;:&quot;&quot;,&quot;descripcion&quot;:&quot;Descripcion del pokemon&quot;,&quot;image&quot;:&quot;https://media.redadn.es/imagenes/pokemon-escudo-nintendo-switch_332429_pn2.jpg&quot;}' />
                     </instance-settings>
                     <type-settings>
                       <dashboard />
@@ -268,7 +245,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='49000' id='26' is-fixed='true' name='Pokemon (2)' w='49200' x='800' y='50000'>
+                <zone fixed-size='280' h='45875' id='7' is-fixed='true' name='Pokemon' w='58200' x='41000' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -277,13 +254,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='49000' id='29' param='[com.tableau.extensions.samples.uinamespace].[0.6.0].[http://localhost:8765/Samples/UINamespace/uinamespace.html]' type='dashboard-object' w='49200' x='50000' y='50000'>
-                  <add-in add-in-id='com.tableau.extensions.samples.uinamespace' extension-url='http://localhost:8765/Samples/UINamespace/uinamespace.html' extension-version='0.6.0' instance-id='3FB696B34F7D4261B8D91494ACC6C96E'>
-                    <instance-settings />
-                    <type-settings>
-                      <dashboard />
-                    </type-settings>
-                  </add-in>
+                <zone fixed-size='280' h='52125' id='26' is-fixed='true' name='Pokemon (2)' w='98400' x='800' y='46875'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -371,8 +342,7 @@
     </window>
     <window class='dashboard' maximized='true' name='Dashboard 1'>
       <viewpoints>
-        <viewpoint name='Pokemon' />
-        <viewpoint name='Pokemon (2)'>
+        <viewpoint name='Pokemon'>
           <selection-collection>
             <tuple-selection>
               <tuple-reference>
@@ -396,165 +366,158 @@
             </tuple-selection>
           </selection-collection>
         </viewpoint>
+        <viewpoint name='Pokemon (2)' />
       </viewpoints>
-      <active id='26' />
+      <active id='-1' />
       <simple-id uuid='{1DEC1D73-DA9C-4DDC-A38A-7A5F9B6B0345}' />
     </window>
   </windows>
   <thumbnails>
     <thumbnail height='192' name='Dashboard 1' width='192'>
       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
-      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
+      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
     </thumbnail>
     <thumbnail height='124' name='Pokemon' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAAB8CAYAAAA/1L8JAAAACXBIWXMAAA7DAAAOwwHHb6hk
@@ -889,10 +852,10 @@
           <default-locale>en_US</default-locale>
           <name resource-id='name' />
           <description>Extension Description</description>
-          <author email='jose.larosa459@gmail.com' name='joselarosa' organization='Belcorp' website='https://www.example.com' />
+          <author email='jose.larosa459@gmail.com' name='José La Rosa' organization='Belcorp' website='https://www.example.com' />
           <min-api-version>1.0</min-api-version>
           <source-location>
-            <url>http://localhost:8765/ImageDemo/ImageExtension.html</url>
+            <url>https://larosam.github.io/ImageDemo/ImageExtension.html</url>
           </source-location>
           <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAlhJREFUOI2Nkt9vy1EYh5/3bbsvRSySCZbIxI+ZCKsN2TKtSFyIrV2WuRCJuBiJWxfuxCVXbvwFgiEtposgLFJElnbU1SxIZIIRJDKTrdu+53Uhra4mce7Oe57Pcz7JOULFisViwZ+29LAzOSjQYDgz1ZcCvWuXV11MJpN+OS/lm6179teqH0yDqxPTCyKSA8DcDsyOmOprnCaeP7459pdgy969i0LTC3IO/RQMyoHcQN+3cnljW3dNIFC47qDaK3g7BwdTkwBaBELT4ZPOUVWgKl4ZBnjxJPUlMDnTDrp0pmr6RHFeEjjcUUXPDGeSEwDN0Xg8sivxMhJNjGzbHd8PkM3eHRfkrBM5NkcQaY2vUnTlrDIA0NoaX+KLXFFlowr14tvVpqb2MICzmQcKqxvbumv+NAhZGCCIPwEw6QWXKYRL/VUXO0+rAUJiPwAk5MIlgVfwPjjHLCL1APmHN94ZdqeYN+NW/mn6I4BvwQYchcLnwFhJMDiYmlRxAzjpKWZkYkUCcZ2I61wi37tLbYyjiN0fHk5Oz3nGSLSzBbNHCF35R7f6K1/hN9PRhek11FrymfQQQKB4+Gl05P2qNRtmETlXW7e+b2z01dfycGNbfFMAbqNyKp9Jp4rzOT8RYFs0njJkc2iqsCObvTsOsDWWqA5C1uFy+Uz/oXJeKwVT4h0RmPUXhi79vuC0Ku6yOffTK3g9lfxfDQAisY516sg5kfOCiJk7HoLt2cf9b/9LANAc7dznm98PagG1fUOZ9IP5uMB8Q4CPoyNvausapkTt3rNMuvdf3C/o6+czhtdwmwAAAABJRU5ErkJggg==</icon>
           <permissions>
@@ -904,35 +867,8 @@
         </dashboard-extension>
         <resources>
           <resource id='name'>
-            <text locale='de_DE'>name in German</text>
-            <text locale='en_US'>name in English</text>
-            <text locale='fr_BE'>name in French</text>
-          </resource>
-        </resources>
-      </manifest>
-      <referenced-views>
-        <referenced-view instances='1' viewId='Dashboard 1' />
-      </referenced-views>
-    </referenced-extension>
-    <referenced-extension>
-      <manifest manifest-version='0.1'>
-        <dashboard-extension extension-version='0.6.0' id='com.tableau.extensions.samples.uinamespace'>
-          <default-locale>en_US</default-locale>
-          <name resource-id='name' />
-          <description>UI Namespace Sample</description>
-          <author email='github@tableau.com' name='tableau' organization='tableau' website='https://www.tableau.com' />
-          <min-api-version>0.9</min-api-version>
-          <source-location>
-            <url>http://localhost:8765/Samples/UINamespace/uinamespace.html</url>
-          </source-location>
-          <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAlhJREFUOI2Nkt9vy1EYh5/3bbsvRSySCZbIxI+ZCKsN2TKtSFyIrV2WuRCJuBiJWxfuxCVXbvwFgiEtposgLFJElnbU1SxIZIIRJDKTrdu+53Uhra4mce7Oe57Pcz7JOULFisViwZ+29LAzOSjQYDgz1ZcCvWuXV11MJpN+OS/lm6179teqH0yDqxPTCyKSA8DcDsyOmOprnCaeP7459pdgy969i0LTC3IO/RQMyoHcQN+3cnljW3dNIFC47qDaK3g7BwdTkwBaBELT4ZPOUVWgKl4ZBnjxJPUlMDnTDrp0pmr6RHFeEjjcUUXPDGeSEwDN0Xg8sivxMhJNjGzbHd8PkM3eHRfkrBM5NkcQaY2vUnTlrDIA0NoaX+KLXFFlowr14tvVpqb2MICzmQcKqxvbumv+NAhZGCCIPwEw6QWXKYRL/VUXO0+rAUJiPwAk5MIlgVfwPjjHLCL1APmHN94ZdqeYN+NW/mn6I4BvwQYchcLnwFhJMDiYmlRxAzjpKWZkYkUCcZ2I61wi37tLbYyjiN0fHk5Oz3nGSLSzBbNHCF35R7f6K1/hN9PRhek11FrymfQQQKB4+Gl05P2qNRtmETlXW7e+b2z01dfycGNbfFMAbqNyKp9Jp4rzOT8RYFs0njJkc2iqsCObvTsOsDWWqA5C1uFy+Uz/oXJeKwVT4h0RmPUXhi79vuC0Ku6yOffTK3g9lfxfDQAisY516sg5kfOCiJk7HoLt2cf9b/9LANAc7dznm98PagG1fUOZ9IP5uMB8Q4CPoyNvausapkTt3rNMuvdf3C/o6+czhtdwmwAAAABJRU5ErkJggg==</icon>
-          <context-menu>
-            <configure-context-menu-item />
-          </context-menu>
-        </dashboard-extension>
-        <resources>
-          <resource id='name'>
-            <text locale='en_US'>UI Namespace Sample</text>
+            <text locale='en_US'>Images Extensión</text>
+            <text locale='es_ES'>Extensión de imágenes</text>
           </resource>
         </resources>
       </manifest>
