@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.19.1211.1636                               -->
+<workbook source-build='2019.4.1 (20194.19.1211.1636)' source-platform='win' version='18.1' xml:base='https://livingdata.belcorp.biz' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <Extensions />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='ImageExtesion' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Pokemon' inline='true' name='federated.0549ly01n1kwpc14ui3is04kmx0z' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Pokemon-dataset' name='excel-direct.067aqsp0u9vh7z10nnq231rheyho'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Users/hoppe/Documents/GitHub/larosam.github.io/Pokemon-dataset.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.067aqsp0u9vh7z10nnq231rheyho' name='Pokemon' table='[Hoja1$]' type='table'>
+          <columns gridOrigin='A1:B6:no:A1:B6:0' header='yes' outcome='6'>
+            <column datatype='string' name='Texto' ordinal='0' />
+            <column datatype='string' name='Imagen' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Texto</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Texto]</local-name>
+            <parent-name>[Pokemon]</parent-name>
+            <remote-alias>Texto</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RPE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Imagen</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Imagen]</local-name>
+            <parent-name>[Pokemon]</parent-name>
+            <remote-alias>Imagen</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RPE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Pokemon]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B6:no:A1:B6:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.517915' measure-ordering='alphabetic' measure-percentage='0.482085' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Peru&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Pokemon'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pokemon' name='federated.0549ly01n1kwpc14ui3is04kmx0z' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0549ly01n1kwpc14ui3is04kmx0z'>
+            <column datatype='string' name='[Imagen]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Texto]' role='dimension' type='nominal' />
+            <column-instance column='[Imagen]' derivation='None' name='[none:Imagen:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Texto]' derivation='None' name='[none:Texto:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='337' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0549ly01n1kwpc14ui3is04kmx0z].[none:Imagen:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0549ly01n1kwpc14ui3is04kmx0z].[none:Texto:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{66AF422A-155D-4C5B-B30D-EB94BBF88125}' />
+    </worksheet>
+    <worksheet name='Pokemon (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Pokemon' name='federated.0549ly01n1kwpc14ui3is04kmx0z' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0549ly01n1kwpc14ui3is04kmx0z'>
+            <column datatype='string' name='[Imagen]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Texto]' role='dimension' type='nominal' />
+            <column-instance column='[Imagen]' derivation='None' name='[none:Imagen:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Texto]' derivation='None' name='[none:Texto:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='337' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0549ly01n1kwpc14ui3is04kmx0z].[none:Imagen:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0549ly01n1kwpc14ui3is04kmx0z].[none:Texto:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{3C523E5B-7B18-4D92-B88D-2E8A2258F472}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='49000' id='7' name='Pokemon' w='49200' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='49000' id='26' name='Pokemon (2)' w='49200' x='800' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='49000' id='29' param='[com.tableau.extensions.samples.uinamespace].[0.6.0].[http://localhost:8765/Samples/UINamespace/uinamespace.html]' type='dashboard-object' w='49200' x='50000' y='50000'>
+            <add-in add-in-id='com.tableau.extensions.samples.uinamespace' extension-url='http://localhost:8765/Samples/UINamespace/uinamespace.html' extension-version='0.6.0' instance-id='3FB696B34F7D4261B8D91494ACC6C96E'>
+              <instance-settings />
+              <type-settings>
+                <dashboard />
+              </type-settings>
+            </add-in>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='49000' id='45' param='[com.example.extensions.name].[0.1.0].[http://localhost:8765/ImageDemo/ImageExtension.html]' type='dashboard-object' w='49200' x='50000' y='1000'>
+            <add-in add-in-id='com.example.extensions.name' extension-url='http://localhost:8765/ImageDemo/ImageExtension.html' extension-version='0.1.0' instance-id='6C52B8E975674EDA96603609FA48FF10'>
+              <instance-settings>
+                <setting key='selectedWorkbooks' value='{&quot;workbook&quot;:&quot;Pokemon (2)&quot;,&quot;column&quot;:&quot;Imagen&quot;,&quot;title&quot;:&quot;Pokemon&quot;,&quot;subtitle&quot;:&quot;Pokemon Forever&quot;,&quot;descripcion&quot;:&quot;Test&quot;}' />
+              </instance-settings>
+              <type-settings>
+                <dashboard />
+              </type-settings>
+            </add-in>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='47' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='46' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='49000' id='7' is-fixed='true' name='Pokemon' w='49200' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='49000' id='45' param='[com.example.extensions.name].[0.1.0].[http://localhost:8765/ImageDemo/ImageExtension.html]' type='dashboard-object' w='49200' x='50000' y='1000'>
+                  <add-in add-in-id='com.example.extensions.name' extension-url='http://localhost:8765/ImageDemo/ImageExtension.html' extension-version='0.1.0' instance-id='6C52B8E975674EDA96603609FA48FF10'>
+                    <instance-settings>
+                      <setting key='selectedWorkbooks' value='{&quot;workbook&quot;:&quot;Pokemon (2)&quot;,&quot;column&quot;:&quot;Imagen&quot;}' />
+                    </instance-settings>
+                    <type-settings>
+                      <dashboard />
+                    </type-settings>
+                  </add-in>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='26' is-fixed='true' name='Pokemon (2)' w='49200' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='49000' id='29' param='[com.tableau.extensions.samples.uinamespace].[0.6.0].[http://localhost:8765/Samples/UINamespace/uinamespace.html]' type='dashboard-object' w='49200' x='50000' y='50000'>
+                  <add-in add-in-id='com.tableau.extensions.samples.uinamespace' extension-url='http://localhost:8765/Samples/UINamespace/uinamespace.html' extension-version='0.6.0' instance-id='3FB696B34F7D4261B8D91494ACC6C96E'>
+                    <instance-settings />
+                    <type-settings>
+                      <dashboard />
+                    </type-settings>
+                  </add-in>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{81EA1EC7-8AE6-42DC-8F99-4C0B44D3C7AC}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Pokemon'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2D58515F-09FA-461E-A1E3-4726A4AEC225}' />
+    </window>
+    <window class='worksheet' name='Pokemon (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{52B0BAC9-6552-48B1-BB3D-EE63AF85181D}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Pokemon' />
+        <viewpoint name='Pokemon (2)' />
+      </viewpoints>
+      <active id='45' />
+      <simple-id uuid='{1DEC1D73-DA9C-4DDC-A38A-7A5F9B6B0345}' />
+    </window>
+  </windows>
+  <referenced-extensions>
+    <referenced-extension>
+      <manifest manifest-version='0.1'>
+        <dashboard-extension extension-version='0.1.0' id='com.example.extensions.name'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>Extension Description</description>
+          <author email='jose.larosa459@gmail.com' name='joselarosa' organization='Belcorp' website='https://www.example.com' />
+          <min-api-version>1.0</min-api-version>
+          <source-location>
+            <url>http://localhost:8765/ImageDemo/ImageExtension.html</url>
+          </source-location>
+          <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAlhJREFUOI2Nkt9vy1EYh5/3bbsvRSySCZbIxI+ZCKsN2TKtSFyIrV2WuRCJuBiJWxfuxCVXbvwFgiEtposgLFJElnbU1SxIZIIRJDKTrdu+53Uhra4mce7Oe57Pcz7JOULFisViwZ+29LAzOSjQYDgz1ZcCvWuXV11MJpN+OS/lm6179teqH0yDqxPTCyKSA8DcDsyOmOprnCaeP7459pdgy969i0LTC3IO/RQMyoHcQN+3cnljW3dNIFC47qDaK3g7BwdTkwBaBELT4ZPOUVWgKl4ZBnjxJPUlMDnTDrp0pmr6RHFeEjjcUUXPDGeSEwDN0Xg8sivxMhJNjGzbHd8PkM3eHRfkrBM5NkcQaY2vUnTlrDIA0NoaX+KLXFFlowr14tvVpqb2MICzmQcKqxvbumv+NAhZGCCIPwEw6QWXKYRL/VUXO0+rAUJiPwAk5MIlgVfwPjjHLCL1APmHN94ZdqeYN+NW/mn6I4BvwQYchcLnwFhJMDiYmlRxAzjpKWZkYkUCcZ2I61wi37tLbYyjiN0fHk5Oz3nGSLSzBbNHCF35R7f6K1/hN9PRhek11FrymfQQQKB4+Gl05P2qNRtmETlXW7e+b2z01dfycGNbfFMAbqNyKp9Jp4rzOT8RYFs0njJkc2iqsCObvTsOsDWWqA5C1uFy+Uz/oXJeKwVT4h0RmPUXhi79vuC0Ku6yOffTK3g9lfxfDQAisY516sg5kfOCiJk7HoLt2cf9b/9LANAc7dznm98PagG1fUOZ9IP5uMB8Q4CPoyNvausapkTt3rNMuvdf3C/o6+czhtdwmwAAAABJRU5ErkJggg==</icon>
+          <permissions>
+            <permission>full data</permission>
+          </permissions>
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+        </dashboard-extension>
+        <resources>
+          <resource id='name'>
+            <text locale='de_DE'>name in German</text>
+            <text locale='en_US'>name in English</text>
+            <text locale='fr_BE'>name in French</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='Dashboard 1' />
+      </referenced-views>
+    </referenced-extension>
+    <referenced-extension>
+      <manifest manifest-version='0.1'>
+        <dashboard-extension extension-version='0.6.0' id='com.tableau.extensions.samples.uinamespace'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>UI Namespace Sample</description>
+          <author email='github@tableau.com' name='tableau' organization='tableau' website='https://www.tableau.com' />
+          <min-api-version>0.9</min-api-version>
+          <source-location>
+            <url>http://localhost:8765/Samples/UINamespace/uinamespace.html</url>
+          </source-location>
+          <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAlhJREFUOI2Nkt9vy1EYh5/3bbsvRSySCZbIxI+ZCKsN2TKtSFyIrV2WuRCJuBiJWxfuxCVXbvwFgiEtposgLFJElnbU1SxIZIIRJDKTrdu+53Uhra4mce7Oe57Pcz7JOULFisViwZ+29LAzOSjQYDgz1ZcCvWuXV11MJpN+OS/lm6179teqH0yDqxPTCyKSA8DcDsyOmOprnCaeP7459pdgy969i0LTC3IO/RQMyoHcQN+3cnljW3dNIFC47qDaK3g7BwdTkwBaBELT4ZPOUVWgKl4ZBnjxJPUlMDnTDrp0pmr6RHFeEjjcUUXPDGeSEwDN0Xg8sivxMhJNjGzbHd8PkM3eHRfkrBM5NkcQaY2vUnTlrDIA0NoaX+KLXFFlowr14tvVpqb2MICzmQcKqxvbumv+NAhZGCCIPwEw6QWXKYRL/VUXO0+rAUJiPwAk5MIlgVfwPjjHLCL1APmHN94ZdqeYN+NW/mn6I4BvwQYchcLnwFhJMDiYmlRxAzjpKWZkYkUCcZ2I61wi37tLbYyjiN0fHk5Oz3nGSLSzBbNHCF35R7f6K1/hN9PRhek11FrymfQQQKB4+Gl05P2qNRtmETlXW7e+b2z01dfycGNbfFMAbqNyKp9Jp4rzOT8RYFs0njJkc2iqsCObvTsOsDWWqA5C1uFy+Uz/oXJeKwVT4h0RmPUXhi79vuC0Ku6yOffTK3g9lfxfDQAisY516sg5kfOCiJk7HoLt2cf9b/9LANAc7dznm98PagG1fUOZ9IP5uMB8Q4CPoyNvausapkTt3rNMuvdf3C/o6+czhtdwmwAAAABJRU5ErkJggg==</icon>
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+        </dashboard-extension>
+        <resources>
+          <resource id='name'>
+            <text locale='en_US'>UI Namespace Sample</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='Dashboard 1' />
+      </referenced-views>
+    </referenced-extension>
+  </referenced-extensions>
+</workbook>
