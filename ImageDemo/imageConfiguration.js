@@ -47,10 +47,15 @@
       selectedWorkbooks = parseSettingsForActiveWorkbooks();
 
       // Set values of inputs
-      document.getElementById("title").value = selectedWorkbooks.title;
-      document.getElementById("subtitle").value = selectedWorkbooks.subtitle;
-      document.getElementById("descripcion").value = selectedWorkbooks.descripcion;
-      console.log(selectedWorkbooks.image);
+      try{
+        document.getElementById("title").value = selectedWorkbooks.title;
+        document.getElementById("subtitle").value = selectedWorkbooks.subtitle;
+        document.getElementById("descripcion").value = selectedWorkbooks.descripcion;
+        console.log(selectedWorkbooks.image);
+      }
+      catch(error){
+        console.log("No se encontró información en las configuraciones");
+      }
       // Loop through datasources in this sheet and create a checkbox UI
       // element for each one.  The existing settings are used to
       // determine whether a datasource is checked by default or not.

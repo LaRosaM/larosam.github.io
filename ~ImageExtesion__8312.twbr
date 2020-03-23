@@ -198,25 +198,9 @@
               <format attr='margin' value='4' />
             </zone-style>
           </zone>
-          <zone forceUpdate='true' h='49000' id='29' param='[com.tableau.extensions.samples.uinamespace].[0.6.0].[http://localhost:8765/Samples/UINamespace/uinamespace.html]' type='dashboard-object' w='49200' x='50000' y='50000'>
+          <zone forceUpdate='true' h='98000' id='29' param='[com.tableau.extensions.samples.uinamespace].[0.6.0].[http://localhost:8765/Samples/UINamespace/uinamespace.html]' type='dashboard-object' w='49200' x='50000' y='1000'>
             <add-in add-in-id='com.tableau.extensions.samples.uinamespace' extension-url='http://localhost:8765/Samples/UINamespace/uinamespace.html' extension-version='0.6.0' instance-id='3FB696B34F7D4261B8D91494ACC6C96E'>
               <instance-settings />
-              <type-settings>
-                <dashboard />
-              </type-settings>
-            </add-in>
-            <zone-style>
-              <format attr='border-color' value='#000000' />
-              <format attr='border-style' value='none' />
-              <format attr='border-width' value='0' />
-              <format attr='margin' value='4' />
-            </zone-style>
-          </zone>
-          <zone forceUpdate='true' h='49000' id='45' param='[com.example.extensions.name].[0.1.0].[http://localhost:8765/ImageDemo/ImageExtension.html]' type='dashboard-object' w='49200' x='50000' y='1000'>
-            <add-in add-in-id='com.example.extensions.name' extension-url='http://localhost:8765/ImageDemo/ImageExtension.html' extension-version='0.1.0' instance-id='6C52B8E975674EDA96603609FA48FF10'>
-              <instance-settings>
-                <setting key='selectedWorkbooks' value='{&quot;workbook&quot;:&quot;Pokemon (2)&quot;,&quot;column&quot;:&quot;Imagen&quot;,&quot;title&quot;:&quot;Pokemon&quot;,&quot;subtitle&quot;:&quot;Pokemon Forever&quot;,&quot;descripcion&quot;:&quot;Test&quot;}' />
-              </instance-settings>
               <type-settings>
                 <dashboard />
               </type-settings>
@@ -243,23 +227,6 @@
             <zone h='100000' id='47' type='layout-basic' w='100000' x='0' y='0'>
               <zone h='98000' id='46' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
                 <zone fixed-size='280' h='49000' id='7' is-fixed='true' name='Pokemon' w='49200' x='800' y='1000'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                  </zone-style>
-                </zone>
-                <zone forceUpdate='true' h='49000' id='45' param='[com.example.extensions.name].[0.1.0].[http://localhost:8765/ImageDemo/ImageExtension.html]' type='dashboard-object' w='49200' x='50000' y='1000'>
-                  <add-in add-in-id='com.example.extensions.name' extension-url='http://localhost:8765/ImageDemo/ImageExtension.html' extension-version='0.1.0' instance-id='6C52B8E975674EDA96603609FA48FF10'>
-                    <instance-settings>
-                      <setting key='selectedWorkbooks' value='{&quot;workbook&quot;:&quot;Pokemon (2)&quot;,&quot;column&quot;:&quot;Imagen&quot;}' />
-                    </instance-settings>
-                    <type-settings>
-                      <dashboard />
-                    </type-settings>
-                  </add-in>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -358,42 +325,11 @@
         <viewpoint name='Pokemon' />
         <viewpoint name='Pokemon (2)' />
       </viewpoints>
-      <active id='45' />
+      <active id='-1' />
       <simple-id uuid='{1DEC1D73-DA9C-4DDC-A38A-7A5F9B6B0345}' />
     </window>
   </windows>
   <referenced-extensions>
-    <referenced-extension>
-      <manifest manifest-version='0.1'>
-        <dashboard-extension extension-version='0.1.0' id='com.example.extensions.name'>
-          <default-locale>en_US</default-locale>
-          <name resource-id='name' />
-          <description>Extension Description</description>
-          <author email='jose.larosa459@gmail.com' name='joselarosa' organization='Belcorp' website='https://www.example.com' />
-          <min-api-version>1.0</min-api-version>
-          <source-location>
-            <url>http://localhost:8765/ImageDemo/ImageExtension.html</url>
-          </source-location>
-          <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAlhJREFUOI2Nkt9vy1EYh5/3bbsvRSySCZbIxI+ZCKsN2TKtSFyIrV2WuRCJuBiJWxfuxCVXbvwFgiEtposgLFJElnbU1SxIZIIRJDKTrdu+53Uhra4mce7Oe57Pcz7JOULFisViwZ+29LAzOSjQYDgz1ZcCvWuXV11MJpN+OS/lm6179teqH0yDqxPTCyKSA8DcDsyOmOprnCaeP7459pdgy969i0LTC3IO/RQMyoHcQN+3cnljW3dNIFC47qDaK3g7BwdTkwBaBELT4ZPOUVWgKl4ZBnjxJPUlMDnTDrp0pmr6RHFeEjjcUUXPDGeSEwDN0Xg8sivxMhJNjGzbHd8PkM3eHRfkrBM5NkcQaY2vUnTlrDIA0NoaX+KLXFFlowr14tvVpqb2MICzmQcKqxvbumv+NAhZGCCIPwEw6QWXKYRL/VUXO0+rAUJiPwAk5MIlgVfwPjjHLCL1APmHN94ZdqeYN+NW/mn6I4BvwQYchcLnwFhJMDiYmlRxAzjpKWZkYkUCcZ2I61wi37tLbYyjiN0fHk5Oz3nGSLSzBbNHCF35R7f6K1/hN9PRhek11FrymfQQQKB4+Gl05P2qNRtmETlXW7e+b2z01dfycGNbfFMAbqNyKp9Jp4rzOT8RYFs0njJkc2iqsCObvTsOsDWWqA5C1uFy+Uz/oXJeKwVT4h0RmPUXhi79vuC0Ku6yOffTK3g9lfxfDQAisY516sg5kfOCiJk7HoLt2cf9b/9LANAc7dznm98PagG1fUOZ9IP5uMB8Q4CPoyNvausapkTt3rNMuvdf3C/o6+czhtdwmwAAAABJRU5ErkJggg==</icon>
-          <permissions>
-            <permission>full data</permission>
-          </permissions>
-          <context-menu>
-            <configure-context-menu-item />
-          </context-menu>
-        </dashboard-extension>
-        <resources>
-          <resource id='name'>
-            <text locale='de_DE'>name in German</text>
-            <text locale='en_US'>name in English</text>
-            <text locale='fr_BE'>name in French</text>
-          </resource>
-        </resources>
-      </manifest>
-      <referenced-views>
-        <referenced-view instances='1' viewId='Dashboard 1' />
-      </referenced-views>
-    </referenced-extension>
     <referenced-extension>
       <manifest manifest-version='0.1'>
         <dashboard-extension extension-version='0.6.0' id='com.tableau.extensions.samples.uinamespace'>
