@@ -47,13 +47,13 @@
       selectedWorkbooks = parseSettingsForActiveWorkbooks();
 
       // Set values of inputs
-      try{
+      try {
         document.getElementById("title").value = selectedWorkbooks.title;
         document.getElementById("subtitle").value = selectedWorkbooks.subtitle;
-        document.getElementById("descripcion").value = selectedWorkbooks.descripcion;
+        document.getElementById("descripcion").value =
+          selectedWorkbooks.descripcion;
         console.log(selectedWorkbooks.image);
-      }
-      catch(error){
+      } catch (error) {
         console.log("No se encontró información en las configuraciones");
       }
       // Loop through datasources in this sheet and create a checkbox UI
@@ -175,8 +175,14 @@
     let title = document.getElementById("title").value;
     let subtitle = document.getElementById("subtitle").value;
     let descripcion = document.getElementById("descripcion").value;
+
     let imageSelected;
-    try{ imageSelected = selectedWorkbooks.image}catch(error){ console.log("No hay imagen registrada")};
+    try {
+      imageSelected = selectedWorkbooks.image;
+    } catch (error) {
+      console.log("No hay imagen registrada");
+    }
+
     selectedWorkbooks = {
       workbook: selectedWorkbook,
       column: selectedColumn,
