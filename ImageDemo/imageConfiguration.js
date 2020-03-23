@@ -175,13 +175,15 @@
     let title = document.getElementById("title").value;
     let subtitle = document.getElementById("subtitle").value;
     let descripcion = document.getElementById("descripcion").value;
+    let imageSelected;
+    try{ imageSelected = selectedWorkbooks.image}catch(error){ console.log("No hay imagen registrada")};
     selectedWorkbooks = {
       workbook: selectedWorkbook,
       column: selectedColumn,
       title: title,
       subtitle: subtitle,
       descripcion: descripcion,
-      image: selectedWorkbooks.image
+      image: imageSelected
     };
     console.log(selectedWorkbooks);
     console.log(JSON.stringify(selectedWorkbooks));
