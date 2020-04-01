@@ -37,7 +37,6 @@
         // Charge settings if there's one
         try {
           updateExtensionBasedOnSettings(tableau.extensions.settings.getAll());
-          console.log(infoSettings);
           $("#configListener").hide();
           $("#main").show();
           setTitles(document, infoSettings);
@@ -46,7 +45,6 @@
             if (worksheet.name == infoSettings.workbook) {
               workbookSelected = worksheet;
             }
-            console.log(workbookSelected);
           });
 
           let options = {
@@ -57,12 +55,8 @@
           };
 
           workbookSelected.getSummaryDataAsync(options).then(function(sumdata) {
-            console.log("-------------------");
             const worksheetData = sumdata;
-            console.log(worksheetData);
             numofElements = worksheetData._totalRowCount;
-            console.log(numofElements);
-            console.log("-------------------");
           });
 
           const markSelection = tableau.TableauEventType.MarkSelectionChanged;
@@ -70,7 +64,6 @@
           let unregisterEventHandlerFunction = workbookSelected.addEventListener(
             markSelection,
             function(selectionEvent) {
-              console.log("Click");
               // When the selection changes, reload the data
               // Initialization succeeded! Get the dashboard
 
@@ -82,10 +75,6 @@
                 for (let row of dataTable.data) {
                   list.push(row[field.index].value);
                 }
-                console.log("||||||||||||");
-                console.log(list.length);
-                console.log(numofElements);
-                console.log("||||||||||||");
                 if (list.length != numofElements) {
                   document.getElementById("selectedItem").src = list[0];
 
@@ -93,21 +82,17 @@
                   //selectedWorkbooks = JSON.parse(settings.selectedWorkbooks);
                   infoSettings.image = list[0];
 
-                  console.log("Test: ");
-                  console.log(infoSettings);
-                  console.log(JSON.stringify(infoSettings));
                   try {
                     tableau.extensions.settings.set(
                       workbooksSettingsKey,
                       JSON.stringify(infoSettings)
                     );
-                    console.log(infoSettings);
                     tableau.extensions.settings.saveAsync().then(result => {
-                      console.log("Settings saved.");
+                      console.log("Configuraciones guardadas.");
                       // ... process results
                     });
                   } catch (error) {
-                    console.log("No pudo guardar");
+                    console.log("Configuraciones no guardadas.");
                   }
                 }
               });
@@ -125,19 +110,14 @@
         tableau.extensions.settings.addEventListener(
           tableau.TableauEventType.SettingsChanged,
           settingsEvent => {
-            console.log("Paso cambio de configuración");
             updateExtensionBasedOnSettings(settingsEvent.newSettings);
 
             setTitles(document, infoSettings);
-
-            console.log(dashboard);
 
             dashboard.worksheets.forEach(function(worksheet) {
               if (worksheet.name == infoSettings.workbook) {
                 workbookSelected = worksheet;
               }
-              console.log("Se actualiza");
-              console.log(workbookSelected);
             });
           }
         );
@@ -193,14 +173,12 @@
    */
   function updateExtensionBasedOnSettings(settings) {
     infoSettings = JSON.parse(settings.selectedWorkbooks);
-    console.log(infoSettings);
   }
 
   function setTitles(document, settings) {
     document.getElementById("title").innerHTML = settings.title;
     document.getElementById("subtitle").innerHTML = settings.subtitle;
     document.getElementById("descripcion").innerHTML = settings.descripcion;
-    console.log("Imangen URL: " + settings.image);
     document.getElementById("selectedItem").src = settings.image;
   }
 })();

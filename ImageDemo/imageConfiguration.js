@@ -52,7 +52,6 @@
         document.getElementById("subtitle").value = selectedWorkbooks.subtitle;
         document.getElementById("descripcion").value =
           selectedWorkbooks.descripcion;
-        console.log(selectedWorkbooks.image);
       } catch (error) {
         console.log("No se encontró información en las configuraciones");
       }
@@ -84,7 +83,6 @@
       let settings = tableau.extensions.settings.getAll();
 
       activeWorkbookIdList = JSON.parse(settings.selectedWorkbooks);
-      console.log(activeWorkbookIdList);
       return activeWorkbookIdList;
     } catch (error) {
       //console.error(error);
@@ -101,20 +99,16 @@
 
   function updateWorkbookList(workbook) {
     selectedWorkbook = workbook.name;
-    console.log(selectedWorkbook);
 
     let existingColumns = [];
 
     workbook.getSummaryDataAsync().then(function(sumdata) {
       $("#columnsList").empty();
       const worksheetData = sumdata;
-      console.log(worksheetData);
 
       existingColumns = worksheetData.columns;
-      console.log(existingColumns);
 
       selectedColumn = existingColumns[0].fieldName;
-      console.log("Hizo click column: " + selectedColumn);
       existingColumns.forEach(element =>
         addColumnItemToUI(element.fieldName, false)
       );
@@ -125,7 +119,6 @@
     var sel = document.getElementById("columnsList");
 
     selectedColumn = sel.value;
-    console.log("Hizo click column: " + selectedColumn);
   }
 
   /**
@@ -180,7 +173,6 @@
     try {
       imageSelected = selectedWorkbooks.image;
     } catch (error) {
-      console.log("No hay imagen registrada");
     }
 
     selectedWorkbooks = {
@@ -191,8 +183,6 @@
       descripcion: descripcion,
       image: imageSelected
     };
-    console.log(selectedWorkbooks);
-    console.log(JSON.stringify(selectedWorkbooks));
 
     tableau.extensions.settings.set(
       workbooksSettingsKey,
